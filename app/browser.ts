@@ -10,7 +10,9 @@ $(document).ready(function () {
     var text : string = $('#text').val();
     $('#text').val('');
     var newEntry = new Journal.Entry(author, title, text);
-    entries.push(newEntry);
+    if (newEntry.validate()) {
+      entries.push(newEntry);      
+    }
     console.log(entries);
   });
 });

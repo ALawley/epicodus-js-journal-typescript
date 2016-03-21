@@ -5,6 +5,7 @@ module Journal {
     title: string;
     text: string;
     wordCount(): number;
+    validate(): boolean;
   }
 
   // Declare Class Entry as an implementation of interface IEntry
@@ -23,6 +24,24 @@ module Journal {
         }
       }
       return words.length;
+    }
+
+    validate(){
+      if (this.title === "") {
+        alert("Please enter a title");
+        return false;
+      } else if (this.text === "") {
+        alert("Please enter some text");
+        return false;
+      } else if (this.title.split('').length > 20) {
+        alert("Please enter a title less than 20 characters");
+        return false;
+      }  else if (this.text.split('').length > 500) {
+        alert("Please enter text less than 500 characters");
+        return false;
+      } else {
+        return true;
+      }
     }
   }
 }
