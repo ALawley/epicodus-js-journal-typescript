@@ -15,7 +15,14 @@ module Journal {
 
     // Methods for Entry class
     wordCount(){
-      return this.text.split(' ').length;
+      var words: string[] = this.text.split(' ');
+      for (var i = 0; words.length; i++) {
+        if (words[i] === "") {
+          words.splice(i, 1);
+          i--;
+        }
+      }
+      return words.length;
     }
   }
 }
