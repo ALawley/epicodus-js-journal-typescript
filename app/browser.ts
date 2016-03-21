@@ -11,7 +11,8 @@ $(document).ready(function () {
     $('#text').val('');
     var newEntry = new Journal.Entry(author, title, text);
     if (newEntry.validate()) {
-      entries.push(newEntry);      
+      entries.push(newEntry);
+      $('#entrylist').append('<div class="well"> <h2>' + newEntry.title + '</h2> <h3>By: ' + newEntry.author + '</h3> <p>' + newEntry.text + '</p> </div>');
     }
     console.log(entries);
   });
