@@ -1,0 +1,22 @@
+{
+  "name": "typescript: to do",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Joe and Anna"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "build",
+    "tmp"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "bootstrap": "^3.3.6"
+  }
+}
